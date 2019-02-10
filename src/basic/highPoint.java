@@ -1,3 +1,5 @@
+package basic;
+
 public class highPoint {
 
     public int countHigh(int[] a){

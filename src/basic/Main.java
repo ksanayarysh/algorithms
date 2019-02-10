@@ -1,17 +1,17 @@
-import java.util.List;
+package basic;
 
 public class Main {
     public static void main(String[] args) {
 
-//        ListNode l1 = new ListNode(1);
+//        basic.ListNode l1 = new basic.ListNode(1);
 //
-//        ListNode d1 = l1;
+//        basic.ListNode d1 = l1;
 //        for (int i = 2; i < 10; i++) {
-//            d1.next = new ListNode(i);
+//            d1.next = new basic.ListNode(i);
 //            d1 = d1.next;
 //        }
 //
-//        ListNode next1 = l1;
+//        basic.ListNode next1 = l1;
 //        while (next1 != null) {
 //            System.out.println(next1.val);
 //            next1 = next1.next;
@@ -20,21 +20,21 @@ public class Main {
 //
 //        System.out.println();
 //
-//        ListNode l2 = new ListNode(1);
+//        basic.ListNode l2 = new basic.ListNode(1);
 //
-//        ListNode d2 = l2;
+//        basic.ListNode d2 = l2;
 //        for (int i = 2; i < 5; i++) {
-//            d2.next = new ListNode(i);
+//            d2.next = new basic.ListNode(i);
 //            d2 = d2.next;
 //        }
 //
-//        ListNode next2 = l2;
+//        basic.ListNode next2 = l2;
 //        while (next2 != null) {
 //            System.out.println(next2.val);
 //            next2 = next2.next;
 //        }
 //
-//        Solution m = new Solution();
+//        basic.Solution m = new basic.Solution();
 //
 //        int[] nums1 = {1, 2, 3, 0, 0, 0};
 //        int m1 = 3;
@@ -48,9 +48,9 @@ public class Main {
 //        int[] nums2_2 = {1};
 //        int n_1 = 1;
 //        m.merge1(nums1_2, m_1, nums2_2, n_1);
-        //ListNode next = m.mergeTwoLists(l1, l2);
+        //basic.ListNode next = m.mergeTwoLists(l1, l2);
 
-//        ListNode nn = m.mergeTwoLists(null, null);
+//        basic.ListNode nn = m.mergeTwoLists(null, null);
 //
 //        System.out.println();
 //        while (nn != null){
@@ -58,11 +58,11 @@ public class Main {
 //            nn = nn.next;
 //        }
 
-//        highPoint h = new highPoint();
+//        basic.highPoint h = new basic.highPoint();
 //        int[] a = {0, 1, 1, 1, 0, 2, 3, 0, 1, 1, 1, 1, 1, 1, 0};
 //        System.out.println(h.countHigh(a));
 
-//        Evaluate e = new Evaluate();
+//        basic.Evaluate e = new basic.Evaluate();
 //        e.calc("( ( 5 * 2 ) + 1 )");
         Solution m = new Solution();
 //        System.out.println("is valid '()' = " + m.isValid( "()"));
@@ -79,7 +79,7 @@ public class Main {
         for (int i = 0; i < res; i++) {
             System.out.print(nums[i] + " ");
         }
-        //BinarySearch.
+        //basic.BinarySearch.
 
     }
 }
