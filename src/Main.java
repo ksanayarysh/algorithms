@@ -2,6 +2,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+
 //        ListNode l1 = new ListNode(1);
 //
 //        ListNode d1 = l1;
@@ -64,14 +65,21 @@ public class Main {
 //        Evaluate e = new Evaluate();
 //        e.calc("( ( 5 * 2 ) + 1 )");
         Solution m = new Solution();
-        System.out.println("is valid '()' = " + m.isValid( "()"));
-        System.out.println("is valid \"()[]{}\" = " + m.isValid( "()[]{}"));
-        System.out.println("is valid \"(]\" = " + m.isValid( "(]"));
-        System.out.println("is valid \"([)]\" = " + m.isValid( "([)]"));
-        System.out.println("is valid \"{[]}\" = " + m.isValid( "{[]}"));
-        System.out.println("is valid \"]\" = " + m.isValid( "]"));
-        System.out.println("is valid \"[\" = " + m.isValid( "["));
+//        System.out.println("is valid '()' = " + m.isValid( "()"));
+//        System.out.println("is valid \"()[]{}\" = " + m.isValid( "()[]{}"));
+//        System.out.println("is valid \"(]\" = " + m.isValid( "(]"));
+//        System.out.println("is valid \"([)]\" = " + m.isValid( "([)]"));
+//        System.out.println("is valid \"{[]}\" = " + m.isValid( "{[]}"));
+//        System.out.println("is valid \"]\" = " + m.isValid( "]"));
+//        System.out.println("is valid \"[\" = " + m.isValid( "["));
 
+        int[] nums = {0,4,4,0,4,4,4,0,2};
+        int res = m.removeElement(nums, 4);
+        System.out.println(res);
+        for (int i = 0; i < res; i++) {
+            System.out.print(nums[i] + " ");
+        }
+        //BinarySearch.
 
     }
 }

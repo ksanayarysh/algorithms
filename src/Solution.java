@@ -1,4 +1,7 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Stack;
+import java.util.stream.IntStream;
 
 class Solution {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
@@ -81,7 +84,7 @@ class Solution {
                 nums1[i] = nums2[j];
                 j--;
             }
-            System.out.println("i = "  + i + " nums[i] = " + nums1[i] + " j  = " + j + " k = " + k);
+            System.out.println("i = " + i + " nums[i] = " + nums1[i] + " j  = " + j + " k = " + k);
         }
 
         for (int i = 0; i < nums1.length; i++) {
@@ -89,7 +92,7 @@ class Solution {
         }
     }
 
-    public boolean isValid(String s){
+    public boolean isValid(String s) {
         if (s.length() == 0) return true;
 
         Stack<Character> opening = new Stack<>();
@@ -97,18 +100,74 @@ class Solution {
         char simb;
         int i = 0;
         char op;
-        while (i < s.length()){
+        while (i < s.length()) {
             simb = s.charAt(i);
             if (simb == '{' || simb == '[' || simb == '(') opening.push(simb);
             else {
                 if (opening.empty()) return false;
                 op = opening.pop();
-                if ((op == '{' && simb != '}') || (op == '[' && simb != ']') || (op == '(' && simb != ')')) return false;
+                if ((op == '{' && simb != '}') || (op == '[' && simb != ']') || (op == '(' && simb != ')'))
+                    return false;
             }
             i++;
         }
-        if (opening.empty()) return  true;
+        if (opening.empty()) return true;
         else return false;
+    }
+
+
+    public int[] twoSums(int[] nums, int target) {
+        int[] indexes = new int[2];
+        int i = 0, j = 0;
+        while (i < nums.length) {
+            j = i + 1;
+            while (j < nums.length) {
+                if (nums[i] == target - nums[j]) {
+                    indexes[0] = i;
+                    indexes[1] = j;
+                    break;
+                }
+                j++;
+            }
+            i++;
+        }
+        return indexes;
+    }
+
+    public int removeDuplicates(int[] nums) {
+        // пока a[i+1] = a[i], сдвигать массив на 1 влево
+        if (nums.length == 0)
+            return 0;
+        int i, j;
+        i = j = 1;
+        for (; j < nums.length; j++) {
+            if (nums[j] != nums[j - 1]) {
+                nums[i++] = nums[j];
+            }
+        }
+        return i;
+
+    }
+
+    public int removeElement(int[] nums, int val) {
+        int i = 0;
+        int j = nums.length - 1;
+
+//        while (j > 0 && nums[j] == val) {
+//            j--;
+//        }
+
+
+        while (i <= j) {
+            if (nums[i] == val) {
+                nums[i] = nums[j--];
+                while (j > 0 && nums[j] == val) {
+                    j--;
+                }
+            }
+            i++;
+        }
+        return j + 1;
     }
 
 
